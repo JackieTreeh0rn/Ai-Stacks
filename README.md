@@ -1,2 +1,4 @@
-# Ai-Stacks
-
+| **Category**             | **Service Name**                  | **Description**                                                                                       |
+|--------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------|
+| **AI Tools**             | Big-AGI                           | LLM front-end with Puppeteer/browserless integration and multi-model local and SaaS LLM support       |
+|                          | Open-WebUI                        | LLM front-end with integration and multi-model local and SaaS LLM support, stack contains redis for websocket support, postgres dastabase w/vector support, tika doc extraction, searxng, edgetts support, and more! |
