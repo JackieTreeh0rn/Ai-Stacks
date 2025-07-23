@@ -4,7 +4,7 @@
 
 set -e
 
-# Start default entrypoint in background
+# Start the default entrypoint in the background
 /usr/local/bin/docker-entrypoint.sh "$@" &
 echo "[init] Waiting for PostgreSQL to be ready..."
 
@@ -15,6 +15,9 @@ until pg_isready -h db -p 5432 -U "$POSTGRES_USER" > /dev/null 2>&1; do
 done
 
 echo "[init] PostgreSQL is up..."
+
+# Set the internal PGPASSWORD env. variable
+export PGPASSWORD="$POSTGRES_PASSWORD"
 
 # Check for 'pgvector' extension
 echo "[init] Checking for 'pgvector' extension..."
